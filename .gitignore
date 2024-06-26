@@ -24,8 +24,9 @@ replay_pid*
 
 run.sh
 
-target/*
-*/target/*
+target/
+*/target/
 
 .env
 .vscode
+.DS_Store
