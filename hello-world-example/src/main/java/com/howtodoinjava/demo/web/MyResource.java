@@ -19,7 +19,7 @@ public class MyResource {
 
 	public int foo() {
       try {
-			  Thread.sleep(5);
+			  Thread.sleep(50);
       }
       catch (InterruptedException e) {}
 
