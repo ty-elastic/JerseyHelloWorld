@@ -6,10 +6,8 @@ OTEL_EXPORTER_OTLP_ENDPOINT=https://abc123.apm.region.provider.cloud.es.io:443
 OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer xyz456
 ```
 
-# BUILD
+# BUILD and RUN
 
-`docker build -t test .`
+`./run.sh`
 
-# RUN
-
-`docker run --env-file .env -p 8080:8080 test`
+After running, a file `otel_logs.tar.gz` will be created with diags.
