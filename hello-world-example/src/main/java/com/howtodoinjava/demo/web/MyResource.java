@@ -11,15 +11,6 @@ import java.util.List;
 @Path("items")
 public class MyResource {
 
-  /*
-   * @GET
-   * 
-   * @Produces(MediaType.APPLICATION_JSON)
-   * public List getAll() {
-   * return List.of(new Item(1L, "Item1"), new Item(2L, "Item2"));
-   * }
-   */
-
   public int foo() {
     try {
       Thread.sleep(50);
@@ -44,13 +35,18 @@ public class MyResource {
     return 0;
   }
 
+  /*
+   * @GET
+   * 
+   * @Produces(MediaType.APPLICATION_JSON)
+   * public List getAll() {
+   * return List.of(new Item(1L, "Item1"), new Item(2L, "Item2"));
+   * }
+   */
   @GET
   @Produces(MediaType.APPLICATION_JSON)
   public Response getAllItems(@CookieParam(value = "cookieParam1") String cookieParam1,
       @CookieParam(value = "cookieParam2") String cookieParam2) {
-
-    System.out.println("cookieParam1 is :: " + cookieParam1);
-    System.out.println("cookieParam2 is :: " + cookieParam2);
 
     List items = List.of(new Item(1L, "Item1"), new Item(2L, "Item2"));
 
