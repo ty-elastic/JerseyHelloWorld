@@ -24,8 +24,21 @@ public class MyResource {
       catch (InterruptedException e) {}
 
         double d = Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(123456789.123456789))))))))));
+        
+        bar();
         return 0;
     }
+
+    public int bar() {
+      try {
+			  Thread.sleep(50);
+      }
+      catch (InterruptedException e) {}
+
+        double d = Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(123456789.123456789))))))))));
+        return 0;
+    }
+
 
   @GET
   @Produces(MediaType.APPLICATION_JSON)
