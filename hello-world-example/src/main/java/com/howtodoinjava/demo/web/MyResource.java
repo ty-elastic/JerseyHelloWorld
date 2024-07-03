@@ -11,39 +11,43 @@ import java.util.List;
 @Path("items")
 public class MyResource {
 
-  /*@GET
-  @Produces(MediaType.APPLICATION_JSON)
-  public List getAll() {
-    return List.of(new Item(1L, "Item1"), new Item(2L, "Item2"));
-  }*/
+  /*
+   * @GET
+   * 
+   * @Produces(MediaType.APPLICATION_JSON)
+   * public List getAll() {
+   * return List.of(new Item(1L, "Item1"), new Item(2L, "Item2"));
+   * }
+   */
 
-	public int foo() {
-      try {
-			  Thread.sleep(50);
-      }
-      catch (InterruptedException e) {}
-
-        double d = Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(123456789.123456789))))))))));
-        
-        bar();
-        return 0;
+  public int foo() {
+    try {
+      Thread.sleep(50);
+    } catch (InterruptedException e) {
     }
 
-    public int bar() {
-      try {
-			  Thread.sleep(50);
-      }
-      catch (InterruptedException e) {}
+    double d = Math.tan(Math
+        .atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(123456789.123456789))))))))));
 
-        double d = Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(123456789.123456789))))))))));
-        return 0;
+    bar();
+    return 0;
+  }
+
+  public int bar() {
+    try {
+      Thread.sleep(50);
+    } catch (InterruptedException e) {
     }
 
+    double d = Math.tan(Math
+        .atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(Math.tan(Math.atan(123456789.123456789))))))))));
+    return 0;
+  }
 
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public Response getAllItems(@CookieParam(value="cookieParam1") String cookieParam1,
-                              @CookieParam(value="cookieParam2") String cookieParam2) {
+  public Response getAllItems(@CookieParam(value = "cookieParam1") String cookieParam1,
+      @CookieParam(value = "cookieParam2") String cookieParam2) {
 
     System.out.println("cookieParam1 is :: " + cookieParam1);
     System.out.println("cookieParam2 is :: " + cookieParam2);
