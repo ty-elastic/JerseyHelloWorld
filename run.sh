@@ -1,6 +1,8 @@
 docker build -t java_otel_test .
 docker stop java_otel_test
 docker rm java_otel_test
+rm -rf diag
+mkdir diag
 docker run -d --name=java_otel_test --env-file .env -v $PWD/diag:/tmp/profiler -p 8080:8080 java_otel_test
 sleep 10
 
